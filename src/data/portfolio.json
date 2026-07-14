@@ -1,0 +1,63 @@
+{
+  "personalInfo": {
+    "name": "Faraz Ahmed",
+    "tagline": "Full-Stack Engineer & Interactive Developer",
+    "bio": "I craft highly interactive, performant, and beautifully designed web experiences. Specialized in React, Node.js, and modern cloud infrastructures, with a passion for fluid animations and user-centric interfaces.",
+    "socials": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "email": "farazahmed7262@gmail.com"
+    }
+  },
+  "skills": [
+    { "name": "React / Next.js", "category": "Frontend" },
+    { "name": "TypeScript", "category": "Frontend" },
+    { "name": "Tailwind CSS", "category": "Frontend" },
+    { "name": "Framer Motion", "category": "Frontend" },
+    { "name": "Node.js / Express", "category": "Backend" },
+    { "name": "GraphQL / REST APIs", "category": "Backend" },
+    { "name": "PostgreSQL / MongoDB", "category": "Backend" },
+    { "name": "Docker / AWS", "category": "DevOps" },
+    { "name": "Vite", "category": "Tools" },
+    { "name": "Git & GitHub", "category": "Tools" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Aura Stream Dashboard",
+      "description": "A real-time analytical dashboard for streaming analytics, integrated with WebSockets, interactive charts, and live chat moderation tools.",
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=60",
+      "tags": ["React", "Tailwind CSS", "Chart.js", "WebSockets"],
+      "github": "https://github.com",
+      "live": "https://google.com"
+    },
+    {
+      "id": 2,
+      "title": "Quantum Board",
+      "description": "A cyberpunk-themed productivity visual board featuring keyboard shortcuts, indexedDB offline caching, and responsive flow lines.",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=60",
+      "tags": ["React", "Framer Motion", "IndexedDB", "Tailwind"],
+      "github": "https://github.com",
+      "live": "https://google.com"
+    },
+    {
+      "id": 3,
+      "title": "Nova 3D Shop",
+      "description": "An e-commerce landing page boasting dynamic webgl-based three-dimensional displays, filtering systems, and Stripe checkout integration.",
+      "image": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=800&auto=format&fit=crop&q=60",
+      "tags": ["Next.js", "Stripe", "Three.js", "Tailwind"],
+      "github": "https://github.com",
+      "live": "https://google.com"
+    },
+    {
+      "id": 4,
+      "title": "Synaptic Synth",
+      "description": "An interactive Web Audio sequencer and modular audio visualizer running natively in the browser with customizable synthesizer patterns.",
+      "image": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&auto=format&fit=crop&q=60",
+      "tags": ["React", "Web Audio API", "Lucide React", "Tailwind"],
+      "github": "https://github.com",
+      "live": "https://google.com"
+    }
+  ]
+}
