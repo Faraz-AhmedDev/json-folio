@@ -1,5 +1,7 @@
 # 🚀 JSON-Driven Developer Portfolio Template
 
+A minimal, JSON-driven developer portfolio. Just edit `src/data/portfolio.json` and deploy!
+
 A modern, highly attractive, and fully responsive developer portfolio where all content is dynamically driven by a single JSON file. Supporting smooth page transitions, scroll animations, and three beautiful interactive themes: **Light**, **Dark**, and **Cyberpunk**.
 
 ---
