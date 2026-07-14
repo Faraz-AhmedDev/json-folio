@@ -33,6 +33,9 @@ export default function Footer({ personalInfo, currentTheme }) {
 
   const getSocialUrl = (key, val) => {
     if (key === 'email') return `mailto:${val}`;
+    if (val && !/^https?:\/\//i.test(val) && !/^mailto:/i.test(val) && !val.startsWith('/') && !val.startsWith('#')) {
+      return `https://${val}`;
+    }
     return val;
   };
 

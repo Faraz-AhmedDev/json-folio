@@ -10,6 +10,13 @@ const Github = (props) => (
 );
 
 export default function ProjectCard({ project, currentTheme }) {
+  const formatUrl = (val) => {
+    if (val && !/^https?:\/\//i.test(val) && !val.startsWith('/') && !val.startsWith('#')) {
+      return `https://${val}`;
+    }
+    return val;
+  };
+
   return (
     <motion.div
       whileHover={{ y: -8 }}
@@ -58,7 +65,7 @@ export default function ProjectCard({ project, currentTheme }) {
         <div className="flex items-center space-x-4 w-full pt-4 border-t border-theme/15 mt-auto">
           {project.github && (
             <a
-              href={project.github}
+              href={formatUrl(project.github)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1.5 text-sm font-semibold text-text-muted hover:text-primary transition-colors font-mono cursor-pointer"
@@ -70,7 +77,7 @@ export default function ProjectCard({ project, currentTheme }) {
           
           {project.live && (
             <a
-              href={project.live}
+              href={formatUrl(project.live)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1.5 text-sm font-semibold text-text-muted hover:text-primary transition-colors font-mono cursor-pointer ml-auto"

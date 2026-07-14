@@ -1,38 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import SkillsSection from './components/SkillsSection';
-import ProjectsGrid from './components/ProjectsGrid';
-import Footer from './components/Footer';
-import portfolioData from './data/portfolio.json';
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import SkillsSection from "./components/SkillsSection";
+import ProjectsGrid from "./components/ProjectsGrid";
+import Footer from "./components/Footer";
+import portfolioData from "./data/portfolio.json";
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('theme');
+    const saved = localStorage.getItem("theme");
     if (saved) return saved;
     // Default to system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    return prefersDark ? "dark" : "light";
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
-  // React to OS-level system theme changes if no explicit user preference is set
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleSystemChange = (e) => {
-      const saved = localStorage.getItem('theme');
+      const saved = localStorage.getItem("theme");
       if (!saved) {
-        setTheme(e.matches ? 'dark' : 'light');
+        setTheme(e.matches ? "dark" : "light");
       }
     };
-    
-    mediaQuery.addEventListener('change', handleSystemChange);
-    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+
+    mediaQuery.addEventListener("change", handleSystemChange);
+    return () => mediaQuery.removeEventListener("change", handleSystemChange);
   }, []);
 
   return (
@@ -50,21 +51,12 @@ function App() {
           personalInfo={portfolioData.personalInfo}
           currentTheme={theme}
         />
-        <SkillsSection
-          skills={portfolioData.skills}
-          currentTheme={theme}
-        />
-        <ProjectsGrid
-          projects={portfolioData.projects}
-          currentTheme={theme}
-        />
+        <SkillsSection skills={portfolioData.skills} currentTheme={theme} />
+        <ProjectsGrid projects={portfolioData.projects} currentTheme={theme} />
       </main>
 
       {/* Footer Section */}
-      <Footer
-        personalInfo={portfolioData.personalInfo}
-        currentTheme={theme}
-      />
+      <Footer personalInfo={portfolioData.personalInfo} currentTheme={theme} />
     </div>
   );
 }
